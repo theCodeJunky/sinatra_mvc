@@ -1,0 +1,16 @@
+A Simple Sinatra setup
+======================
+
+* controller.rb is the controller
+* models are found in the /models directory and are loaded up in the configure block of the controller.
+* views are in the view directory, they use a layout.erb file and can handle partials
+
+Steps
+-------------
+* install ruby, mysql and all required gems
+* create a database
+* define your models and properties
+* run: $ ruby ./db/migrate.rb (this will create your tables)
+* Note: db is defined in the configure block of controller.rb and the migration.rb file
+* code!
+* start the server with: $ ruby controller.rb

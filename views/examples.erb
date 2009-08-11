@@ -1,0 +1,6 @@
+<%= partial :_nav_bar, :locals=>{:location=>'Examples'} %>
+<ul>
+<% @examples.each do |example| %>
+	<li><%= example.name %></li>
+<% end %>
+</ul>
