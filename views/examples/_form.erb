@@ -1,0 +1,22 @@
+<!-- This is how errors are handled.
+	Find out more at: http://datamapper.org/doku.php?id=docs:validations
+	NOTE: The example.rb model class has a validates method on it for title
+	-->
+<% unless @example.errors.empty? %>
+  <h3>There were errors, please correct them.</h3>
+  <% @example.errors.each do |error| %>
+    <%= error %><br/>
+  <% end %>
+<% end %>
+
+<fieldset>
+  <legend>Example Info</legend>
+  <p class="required">
+    <label>* Title</label>
+	<input type="text" name="example[title]" value="<%= @example.title %>">
+  </p>
+  <p>
+    <label>Body</label>
+	<input type="text" name="example[body]" value="<%= @example.body %>">
+  </p>
+</fieldset>

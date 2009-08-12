@@ -1,0 +1,13 @@
+<h2>New Example</h2>
+
+<div id="new_example">
+ <form action="/examples" method="post" >
+	<!-- NOTE: we've passing in a hidden method value call PUT which maps to the correct route. -->
+    <input name="_method" type="hidden" value="PUT"/>	
+    <%= partial :'/examples/_form' %>    
+    <fieldset>
+      <legend>Save changes</legend>
+      <input type="submit" value="Update">
+    </fieldset>
+  </form>
+</div>

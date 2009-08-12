@@ -5,5 +5,9 @@
 class Example
   include DataMapper::Resource
   property :id, Serial
-  property :name, String
+  property :title, String
+  property :body, String  
+
+  validates_present :title
+  
 end

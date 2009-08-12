@@ -13,6 +13,7 @@
 require 'rubygems'
 require 'dm-core'
 require 'dm-aggregates'
+require 'dm-validations'
 
 DataMapper.setup(:default, 'mysql://localhost/db_dev')  
 
@@ -26,5 +27,5 @@ DataMapper.auto_upgrade!
 
 # This creates 5 sample items.
 5.times do |item|
-  Example.create(:name=>"Thing #{item}")
+  Example.create(:title=>"Thing #{item}")
 end

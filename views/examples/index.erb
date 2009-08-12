@@ -1,0 +1,14 @@
+<%= partial :_nav_bar, :locals=>{:location=>'Examples'} %>
+<p>
+	<a href="/examples/new">Create New Example</a>
+</p>
+<ul>
+<% @examples.each do |example| %>
+	<li>
+		<%= example.title %>:: <%= example.body %>
+		<br/>
+		<!-- This 'onclick_delete' is defined in the helpers block in the controller.rb -->
+		<a href="/examples/<%= example.id %>" onclick="<%= onclick_delete 'Are you sure you want to delete?' %>">[delete]</a>		
+	</li>
+<% end %>
+</ul>
