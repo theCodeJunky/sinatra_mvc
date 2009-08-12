@@ -8,12 +8,10 @@ require 'dm-validations'
 # Define setup CONSTANTS or other items here
 ######################
 configure do
-  puts "@@@@calling configure block"
-  DEFINE_CONSTANT = 'some constant'
-  DataMapper::Logger.new(STDOUT, :debug)
+  APP_NAME = 'MVC Example App'
+  #DataMapper::Logger.new(STDOUT, :debug)
   DataMapper.setup(:default, 'mysql://localhost/db_dev')
   Dir.glob("#{File.expand_path(File.dirname(__FILE__))}/models/*.rb").each do |f|
-    puts "@@@@@@@ requiring #{f}"
     require f
   end  
 end
