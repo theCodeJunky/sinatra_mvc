@@ -9,6 +9,8 @@
 		<br/>
 		<!-- This 'onclick_delete' is defined in the helpers block in the controller.rb -->
 		<a href="/examples/<%= example.id %>" onclick="<%= onclick_delete 'Are you sure you want to delete?' %>">[delete]</a>		
+		| 
+		<a href="/examples/<%= example.id %>/edit">[edit]</a>				
 	</li>
 <% end %>
 </ul>

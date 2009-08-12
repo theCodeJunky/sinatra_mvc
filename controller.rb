@@ -85,7 +85,7 @@ get "/examples/:id/edit" do
   erb :'/examples/edit'
 end
 
-put "/admin/tips/:id" do
+put "/examples/:id" do
   @example = Example.get(params[:id])
   @example.attributes = params[:example]  
   if @example.save    
